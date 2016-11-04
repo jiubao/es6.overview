@@ -65,7 +65,7 @@
 					<h2>Agenda</h2>
 					<ul>
             <li>Let and Const</li>
-						<li>Parameters</li>
+						<li>Parameter - default, rest, spread</li>
 						<li>Destructuring assignment</li>
             <li>Arrow function</li>
 						<li>Template literals (strings)</li>
@@ -163,7 +163,27 @@ fn2(1, null)
 
             <pre>
               <code class="hljs" data-trim contenteditable>
-function fn(a, b, ...args) {}
+function fn(x, ...y) {
+	return x * y.length;
+}
+
+fn(2, "xxx", 3, {}); // 6
+
+              </code>
+            </pre>
+
+					</section>
+
+					<section>
+						<h3>Spread parameters</h3>
+
+            <pre>
+              <code class="hljs" data-trim contenteditable>
+function fn(x, y, z) {
+	return x + y + z;
+}
+
+fn(...[1,2,3]) // 6
               </code>
             </pre>
 
